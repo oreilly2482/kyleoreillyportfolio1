@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Kyle O'Reilly Engineering Portfolio</title>
+    <style>
+    /* General body styles */
+    body {
+        font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    /* Header styles */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 40px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 1); /* Add shadow to the header */
+        position: relative;
+        z-index: 10; /* Higher z-index to make it appear above other elements */
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    .header-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 12px 18px;
+        color: #fff;
+        background-color: #5c5b5b;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1em;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        position: relative;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .button::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #5c5b5b;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+    }
+
+    .button:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Smaller text below header */
+    .header-description {
+        font-size: 1.1em;
+        color: #ddd;
+        margin-top: 10px;
+    }
+
+    /* Grid section styles */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center; /* Center-align text */
+    }
+
+    .grid-item img {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Ensure the image is square */
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .grid-item h2 {
+        margin: 10px;
+        font-size: 1.5em;
+        color: #333;
+    }
+
+    .grid-item p {
+        margin: 10px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .grid-item a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .grid-item a:hover h2 {
+        color: #007BFF;
+        text-decoration: underline;
+    }
+
+    /* Grid item hover effect */
+    .grid-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        .header-buttons {
+            flex-direction: column;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+    }
+
+    /* Projects Header styles */
+    .projects-header {
+        background-color: #5c5b5b;
+        color: white;
+        padding: 20px 40px;
+        text-align: center;
+        margin: 0 auto 20px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
+    }
+
+    .projects-header h2 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Kyle O'Reilly</h1>
+        <div class="header-buttons">
+            <a href="mailto:oreilly2482@outlook.com" class="button" data-tooltip="oreilly2482@outlook.com">📧 Email</a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="button">🔗 LinkedIn</a>
+        </div>
+    </div>
+    <p class="header-description">B.S. in Mechanical Engineering - Oregon State University</p>
+</header>
+
+<section class="projects-header">
+    <h2>My Projects</h2>
+</section>
+
+
+<section class="grid">
+    <!-- Repeat for each project -->
+    <div class="grid-item">
+        <a href="project1.html">
+            <img src="pictures/project1_img1.JPG" alt="Project 1 Image">
+            <h2>Automatic Solar Tracker</h2>
+        </a>
+        <p>Design and implimentation of an electromechanical system to track the sun using a parabolic solar dish.</p>
+    </div>
+    <div class="grid-item">
+        <a href="project2.html">
+            <img src="pictures/project2_img1.JPG" alt="Project 2 Image">
+            <h2>Automatic Egg Cracker</h2>
+        </a>
+        <p>Design and prototyping of an electromechanical assistive device to crack eggs.</p>
+    </div>
+    <div class="grid-item">
+        <a href="project3.html">
+            <img src="pictures/project3_img1.JPG" alt="Project 3 Image">
+            <h2>Punching Press and Calibrator</h2>
+        </a>
+        <p>Mechanical design of a punching press and implimentation of a high frequency, low cost, load cell system.</p>
+    </div>
+    <div class="grid-item">
+        <a href="project4.html">
+            <img src="pictures/project4_img1.JPG" alt="Project 4 Image">
+            <h2>Foot Control Macro Pad</h2>
+        </a>
+        <p>Design and implimentation of a macro input pad for keyboard control using feet.</p>
+    </div>
+    <div class="grid-item">
+        <a href="project5.html">
+            <img src="pictures/project5_img1.JPG" alt="Project 5 Image">
+            <h2>Pneumatic Press</h2>
+        </a>
+        <p>Design and implimentation of a pneumatic press to prevent parts warping after heat treatment.</p>
+    </div>
+    <div class="grid-item">
+        <a href="project6.html">
+            <img src="pictures/project6_img1.JPG" alt="Project 6 Image">
+            <h2>Drill Press Table</h2>
+        </a>
+        <p>Design and implimentation of a steel table for drill press and tool storage.</p>
+    </div>
+</section>
+
+</body>
+</html>
