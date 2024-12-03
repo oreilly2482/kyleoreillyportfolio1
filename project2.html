@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatic Solar Tracker</title>
+    <title>Automatic Egg Cracker</title>
     <style>
         /* General page styles */
 
@@ -147,21 +147,24 @@
 </head>
 <body>
 <header>
-    <h1>Automatic Solar Tracker</h1>
+    <h1>Automatic Egg Cracker</h1>
 </header>
 
 <div class="text-content">
     <p>
         <br>
-        Bachelor's Capstone Project: Automate the pan and tilt movement of a 9ft diameter solar furnace to track the sun.
+        Finalist Design for InventOregon Prototyping competition. This was designed to be an improvement upon current assitive devices for cracking eggs.
+        <br>
+        This system loands an egg, cracks it, ejects the shell, and load another egg. This is all triggered by a limit switch on the top of the device, so it only operates if eggs are in place.
+
         <br><br>
         <b>Electronics Design:</b>
     </p>
     <ul>
-        <li>GPS Module to get time data</li>
-        <li>Rotary encoder for pan positioning</li>
-        <li>Accelerometer for tilt positioning</li>
-        <li>Solar module for battery level and charging</li>
+        <li>Controlled by Arduino</li>
+        <li>DC motor to drive cracking arms</li>
+        <li>Servo motor to control egg dispensing</li>
+        <li>Limit switches for arm homing, and system triggering</li>
     </ul>
 
     <p>
@@ -169,27 +172,24 @@
         <b>Mechanical Design:</b>
     </p>
     <ul>
-        <li>Motor sizing for pan rotation</li>
-        <li>Linear actuator sizing for tilt mechanism</li>
-        <li>Counterweight installtion for reduced motor sizing</li>
+        <li>A Lead screw drives the arms- this component is removable for easy cleaning.</li>
+        <li>Designed so arms cannot run off of the lead screw, meaning only one limit switch was required for positioning.</li>
+        <li>3D printed and designed in Solidworks and 3D Printed using PLA.</li>
 
     </ul>
 </div>
-
-
 <div class="youtube-video">
-        <iframe src="https://www.youtube.com/embed/272_sGzH_48"
+        <iframe src="https://www.youtube.com/embed/mNwY55HYi9E"
                 title="YouTube Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
         </iframe>
     </div>
-
 <div class="container">
     <!-- Image Grid -->
     <div class="image-grid">
-        <img src="pictures/project1_img1.JPG" alt="Image 1">
-        <img src="pictures/project1_img2.JPG" alt="Image 2">
+        <img src="pictures/project2_img1.JPG" alt="Image 1">
+        <img src="pictures/project2_img2.JPG" alt="Image 2">
 
     </div>
 
